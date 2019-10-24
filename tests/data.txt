@@ -1,0 +1,47 @@
+MAN(1) Manual pager utils MAN(1)
+
+NAME
+       man - an interface to the on-line reference manuals
+
+SYNOPSIS
+       man  [-C  file] [-d] [-D] [--warnings[=warnings]] [-R encoding] [-L
+       locale] [-m  system[,...]]  [-M  path]  [-S  list]  [-e  extension]
+       [-i|-I]  [--regex|--wildcard]  [--names-only]  [-a] [-u] [--no-sub‐
+       pages] [-P pager] [-r prompt] [-7] [-E encoding] [--no-hyphenation]
+       [--no-justification]  [-p  string]  [-t] [-T[device]] [-H[browser]]
+       [-X[dpi]] [-Z] [[section] page[.section] ...] ...
+       man -k [apropos options] regexp ...
+       man -K [-w|-W] [-S list] [-i|-I] [--regex] [section] term ...
+       man -f [whatis options] page ...
+       man -l [-C file] [-d] [-D]  [--warnings[=warnings]]  [-R  encoding]
+       [-L  locale]  [-P pager] [-r prompt] [-7] [-E encoding] [-p string]
+       [-t] [-T[device]] [-H[browser]] [-X[dpi]] [-Z] file ...
+       man -w|-W [-C file] [-d] [-D] page ...
+       man -c [-C file] [-d] [-D] page ...
+       man [-?V]
+
+DESCRIPTION
+       man is the system's manual pager.  Each page argument given to  man
+       is normally the name of a program, utility or function.  The manual
+       page associated with each of these arguments is then found and dis‐
+       played.   A  section,  if provided, will direct man to look only in
+       that section of the manual.  The default action is to search in all
+       of  the available sections following a pre-defined order (1 1p 8 2
+       3 3p 4 5 6 7 9 0p n l p o 1x 2x 3x 4x 5x  6x  7x  8x  by  default,
+       unless  overridden  by  the SECTION directive in /etc/man_db.conf),
+       and to show only the first page found, even if page exists in  sev‐
+       eral sections.
+
+       The table below shows the section numbers of the manual followed by
+       the types of pages they contain.
+
+       1   Executable programs or shell commands
+       2   System calls (functions provided by the kernel)
+       3   Library calls (functions within program libraries)
+       4   Special files (usually found in /dev)
+       5   File formats and conventions eg /etc/passwd
+       6   Games
+       7   Miscellaneous (including macro packages and conventions),  e.g.
+           man(7), groff(7)
+       8   System administration commands (usually only for root)
+       9   Kernel routines [Non standard]
